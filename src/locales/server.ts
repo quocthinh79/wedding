@@ -2,7 +2,6 @@ import { cache } from 'react';
 import { createInstance } from 'i18next';
 import { cookies as getCookies } from 'next/headers';
 import resourcesToBackend from 'i18next-resources-to-backend';
-// eslint-disable-next-line import/no-unresolved
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
 import {
@@ -36,11 +35,11 @@ export const getServerTranslations = cache(
       t: i18nextInstance.getFixedT(
         language,
         Array.isArray(ns) ? ns[0] : ns,
-        options.keyPrefix
+        options.keyPrefix,
       ),
       i18n: i18nextInstance,
     };
-  }
+  },
 );
 
 // ----------------------------------------------------------------------
@@ -52,8 +51,8 @@ const initServerI18next = async (language: string, namespace: string) => {
     .use(initReactI18next)
     .use(
       resourcesToBackend(
-        (lang: string, ns: string) => import(`./langs/${lang}/${ns}.json`)
-      )
+        (lang: string, ns: string) => import(`./langs/${lang}/${ns}.json`),
+      ),
     )
     .init(i18nOptions(language, namespace));
 

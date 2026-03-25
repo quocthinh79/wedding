@@ -19,11 +19,11 @@ const eslintConfig = [
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
     'prettier',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
   ),
   {
     rules: {
-      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       'react/display-name': 'off',
       'padding-line-between-statements': [
