@@ -35,7 +35,7 @@ export const EventSchedule = ({ wedding }: EventScheduleProps) => {
     audience !== 'bride'
       ? {
           time: '10/05/2026 - 10:00',
-          event: 'Lễ Thành Hôn Nhà Trai',
+          event: 'Lễ Tân Hôn Nhà Trai',
           description: wedding.events.groomDay.lunarDate,
         }
       : null,

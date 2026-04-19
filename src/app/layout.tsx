@@ -1,19 +1,11 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
-import './globals.css';
 import { Toaster } from 'sonner';
+import './globals.css';
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  'https://quocthinh-giainhan.vercel.app';
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://quocthinh-giainhan.vercel.app';
 
 const thumbnailPath = '/thumbnail.jpg';
-
-const poppins = Poppins({
-  variable: '--font-poppins',
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -53,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='vi'>
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`antialiased`}>
         {children}
         <Toaster />
       </body>

@@ -120,7 +120,7 @@ export const CountdownTimer = ({ wedding }: CountdownTimerProps) => {
           </h2>
           <div className='w-24 h-px bg-rose-400 mx-auto mb-4'></div>
           <p className='text-gray-600 text-base sm:text-lg md:text-xl'>
-            Từng khoảnh khắc đều đưa chúng tôi đến gần hơn với ngày thành hôn.
+            Từng khoảnh khắc đều đưa chúng tôi đến gần hơn với ngày tân hôn.
           </p>
         </motion.div>
 
