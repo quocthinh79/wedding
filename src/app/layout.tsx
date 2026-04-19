@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
   description:
-    'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+    'Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Lê Quốc Thịnh và Đống Giai Nhân.',
   openGraph: {
     title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
     description:
-      'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+      'Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Lê Quốc Thịnh và Đống Giai Nhân.',
     url: siteUrl,
     siteName: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
     description:
-      'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+      'Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Lê Quốc Thịnh và Đống Giai Nhân.',
     images: [thumbnailPath],
   },
 };
