@@ -25,7 +25,7 @@ export const WEDDING_CONFIG = {
   events: {
     groomDay: {
       label: 'Ngày Nhà Trai',
-      date: new Date('2026-05-10T10:00:00+07:00'),
+      date: new Date('2026-05-10T11:00:00+07:00'),
       lunarDate: 'Nhằm ngày 24 tháng 03 năm Bính Ngọ',
       venueName: 'Tại tư gia',
       address: '844 Ấp Bình Thắng, Xã Phú Giáo, TP. HCM',
@@ -35,7 +35,7 @@ export const WEDDING_CONFIG = {
     },
     brideDay: {
       label: 'Ngày Nhà Gái',
-      date: new Date('2026-05-03T10:00:00+07:00'),
+      date: new Date('2026-05-03T11:00:00+07:00'),
       lunarDate: 'Nhằm ngày 17 tháng 03 năm Bính Ngọ',
       venueName: 'Nhà hàng tiệc cưới Lộc Vừng',
       address:

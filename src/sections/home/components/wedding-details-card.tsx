@@ -49,25 +49,21 @@ export const WeddingDetailsCard = ({ wedding }: WeddingDetailsCardProps) => {
   >;
 
   const visibleFamilyCards = [
-    audience !== 'bride'
-      ? {
-          key: 'groom',
-          title: 'Nhà Trai',
-          father: family.groom.father,
-          mother: family.groom.mother,
-          address: family.groom.address,
-        }
-      : null,
-    audience !== 'groom'
-      ? {
-          key: 'bride',
-          title: 'Nhà Gái',
-          father: family.bride.father,
-          mother: family.bride.mother,
-          address: family.bride.address,
-        }
-      : null,
-  ].filter(Boolean) as Array<FamilyCardProps & { key: string }>;
+    {
+      key: 'groom',
+      title: 'Nhà Trai',
+      father: family.groom.father,
+      mother: family.groom.mother,
+      address: family.groom.address,
+    },
+    {
+      key: 'bride',
+      title: 'Nhà Gái',
+      father: family.bride.father,
+      mother: family.bride.mother,
+      address: family.bride.address,
+    },
+  ];
 
   const visibleEventSummaries = [
     audience !== 'bride'
@@ -245,7 +241,9 @@ const WeddingDayDetailsCard = ({
 
         <div className='flex flex-col sm:flex-row items-stretch justify-center gap-6 sm:gap-8 md:gap-12 mb-8'>
           <DateStatCard
-            value={String(eventDate.getDate())}
+            value={String(
+              Number(eventDate.getDate()).toString().padStart(2, '0'),
+            )}
             label='Ngày'
             gradientClass={dayClass}
             delay={delay + 0.2}

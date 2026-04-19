@@ -3,6 +3,12 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'sonner';
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  'https://quocthinh-giainhan.vercel.app';
+
+const thumbnailPath = '/thumbnail.jpg';
+
 const poppins = Poppins({
   variable: '--font-poppins',
   subsets: ['latin'],
@@ -10,6 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
   description:
     'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
@@ -17,7 +24,16 @@ export const metadata: Metadata = {
     title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
     description:
       'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
-    images: ['/assets/images/wedding-images/DSC05243.jpg'],
+    url: siteUrl,
+    siteName: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
+    images: [
+      {
+        url: thumbnailPath,
+        width: 1200,
+        height: 630,
+        alt: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
+      },
+    ],
     type: 'website',
     locale: 'vi_VN',
   },
@@ -26,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
     description:
       'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
-    images: ['/assets/images/wedding-images/DSC05243.jpg'],
+    images: [thumbnailPath],
   },
 };
 
