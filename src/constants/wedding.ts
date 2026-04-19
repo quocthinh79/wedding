@@ -1,5 +1,5 @@
 export const WEDDING_CONFIG = {
-  date: new Date('2026-05-10T10:00:00+07:00'),
+  date: new Date('2026-05-10T11:00:00+07:00'),
   bride: {
     name: 'Giai Nhân',
     fullName: 'Đống Giai Nhân',
@@ -49,13 +49,13 @@ export const WEDDING_CONFIG = {
     ceremony: {
       name: 'Tại tư gia',
       address: '844 Ấp Bình Thắng, Xã Phú Giáo, TP. HCM',
-      time: '10:00, Chủ nhật, 10/05/2026',
+      time: '11:00, Chủ nhật, 10/05/2026',
     },
     reception: {
       name: 'Nhà hàng tiệc cưới Lộc Vừng',
       address:
         'Hẻm 703, K1 - 129 - Đường Bùi Hữu Nghĩa, phường Biên Hòa, tỉnh Đồng Nai',
-      time: '10:00, Chủ nhật, 03/05/2026',
+      time: '11:00, Chủ nhật, 03/05/2026',
     },
   },
 };

@@ -72,7 +72,7 @@ export const WeddingDetailsCard = ({ wedding }: WeddingDetailsCardProps) => {
           label: events.groomDay.label,
           venue: events.groomDay.venueName,
           address: events.groomDay.address,
-          time: '10:00, Chủ nhật, 10/05/2026',
+          time: '11:00, Chủ nhật, 10/05/2026',
           lunarDate: events.groomDay.lunarDate,
         }
       : null,
@@ -82,7 +82,7 @@ export const WeddingDetailsCard = ({ wedding }: WeddingDetailsCardProps) => {
           label: events.brideDay.label,
           venue: events.brideDay.venueName,
           address: events.brideDay.address,
-          time: '10:00, Chủ nhật, 03/05/2026',
+          time: '11:00, Chủ nhật, 03/05/2026',
           lunarDate: events.brideDay.lunarDate,
         }
       : null,
