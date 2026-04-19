@@ -136,7 +136,7 @@ export default function NavigationFAB({
           className="absolute right-full top-1/2 -translate-y-1/2 mr-4 bg-gray-800/90 text-white text-xs px-3 py-2 rounded-lg shadow-lg backdrop-blur-sm whitespace-nowrap pointer-events-none"
         >
           <div className="font-medium capitalize">
-            {activeSection === 'hero' ? 'Home' : activeSection}
+            {activeSection === 'hero' ? 'Trang chủ' : activeSection}
           </div>
           <div className="text-gray-300 text-xs">
             {sections.indexOf(activeSection) + 1} of {sections.length}

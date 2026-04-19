@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
-import { LangProvider, LocalizationProvider } from '@/locales';
 import { Toaster } from 'sonner';
 
 const poppins = Poppins({
@@ -11,9 +10,24 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'The Wedding of Fiqri & Beloved',
+  title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
   description:
-    'Join us in celebrating the union of Fiqri and his beloved. Discover our love story, wedding details, and more.',
+    'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+  openGraph: {
+    title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
+    description:
+      'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+    images: ['/assets/images/wedding-images/DSC05243.jpg'],
+    type: 'website',
+    locale: 'vi_VN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Thiệp Cưới Quốc Thịnh & Giai Nhân',
+    description:
+      'Trân trọng kính mời bạn đến chung vui trong lễ thành hôn của Lê Quốc Thịnh và Đống Giai Nhân.',
+    images: ['/assets/images/wedding-images/DSC05243.jpg'],
+  },
 };
 
 export default function RootLayout({
@@ -22,14 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='vi'>
       <body className={`${poppins.variable} antialiased`}>
-        <LangProvider>
-          <LocalizationProvider>
-            {children}
-            <Toaster />
-          </LocalizationProvider>
-        </LangProvider>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

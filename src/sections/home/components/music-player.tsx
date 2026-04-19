@@ -2,14 +2,12 @@
 
 import { motion } from 'motion/react';
 import { useState, useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 interface MusicPlayerProps {
   className?: string;
 }
 
 export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
-  const { t } = useTranslation('home');
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -140,10 +138,10 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                   🎵
                 </motion.div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  {t('music.enable-music')}
+                  Bật Nhạc Nền
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  {t('music.browser-blocked')}
+                  Trình duyệt đang chặn tự động phát nhạc. Vui lòng nhấn nút bên dưới để bật nhạc cưới.
                 </p>
               </div>
 
@@ -151,17 +149,17 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
               <div className="bg-blue-50 rounded-lg p-4 mb-6">
                 <h4 className="font-semibold text-blue-800 mb-2 flex items-center">
                   <span className="mr-2">⚙️</span>
-                  {t('music.how-to-enable')}
+                  Hướng dẫn bật phát nhạc
                 </h4>
                 <div className="text-blue-700 text-sm space-y-1">
                   <p>
-                    • <strong>Chrome/Edge:</strong> {t('music.chrome-edge')}
+                    • <strong>Chrome/Edge:</strong> Bấm biểu tượng khóa trên thanh địa chỉ và cho phép phát âm thanh.
                   </p>
                   <p>
-                    • <strong>Firefox:</strong> {t('music.firefox')}
+                    • <strong>Firefox:</strong> Cho phép phát âm thanh khi trình duyệt hỏi quyền.
                   </p>
                   <p>
-                    • <strong>Safari:</strong> {t('music.safari')}
+                    • <strong>Safari:</strong> Vào cài đặt trang web và cho phép Auto-Play.
                   </p>
                 </div>
               </div>
@@ -174,7 +172,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                   onClick={handleAllowAutoplay}
                   className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
                 >
-                  {t('music.play-music')}
+                  Phát Nhạc
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -182,13 +180,13 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                   onClick={handleDismissModal}
                   className="px-4 py-3 bg-gray-100 text-gray-600 font-medium rounded-lg hover:bg-gray-200 transition-colors duration-200"
                 >
-                  {t('music.later')}
+                  Để Sau
                 </motion.button>
               </div>
 
               {/* Footer note */}
               <p className="text-xs text-gray-500 text-center mt-4">
-                {t('music.auto-note')}
+                Nhạc sẽ tự phát sau khi bạn cho phép trình duyệt.
               </p>
             </div>
           </motion.div>
@@ -213,10 +211,10 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
             </motion.div>
             <div>
               <div className="font-medium text-sm">
-                {t('music.wedding-music')}
+                Nhạc Cưới
               </div>
               <div className="text-xs opacity-90">
-                {t('music.click-to-start')}
+                Nhấn nút nhạc để bắt đầu
               </div>
             </div>
           </div>
@@ -419,15 +417,15 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
           >
             <div className="font-medium">
               {isPlaying
-                ? `🎵 ${t('music.playing')}`
+                ? '🎵 Đang phát'
                 : autoplayBlocked && !hasInteracted
-                ? `🎵 ${t('music.click-to-start')}`
-                : `🎵 ${t('music.paused')}`}
+                ? '🎵 Nhấn để bật nhạc'
+                : '🎵 Tạm dừng'}
             </div>
             <div className="text-gray-300 text-xs">
               {autoplayBlocked && !hasInteracted
-                ? `${t('music.wedding-music')} (Autoplay Blocked)`
-                : t('music.wedding-music')}
+                ? 'Nhạc cưới (đang bị chặn tự phát)'
+                : 'Nhạc cưới'}
             </div>
 
             {/* Tooltip arrow */}

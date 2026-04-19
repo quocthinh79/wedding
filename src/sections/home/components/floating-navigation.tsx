@@ -1,11 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import {
-  FloatingParticles,
-  LanguageToggle,
-  NavigationButton,
-} from '@/components';
+import { FloatingParticles, NavigationButton } from '@/components';
 import { NAVIGATION_SECTIONS } from '@/constants';
 import { NAVIGATION_ANIMATIONS } from '@/constants/navigation';
 
@@ -39,10 +35,6 @@ export default function FloatingNavigation({
               onClick={() => onScrollToSection(section.id)}
             />
           ))}
-
-          {/* Language Toggle */}
-          <div className="w-px h-6 bg-gray-200 mx-1 sm:mx-2"></div>
-          <LanguageToggle />
         </div>
 
         <FloatingParticles />

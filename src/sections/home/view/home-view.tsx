@@ -26,7 +26,7 @@ export default function HomeView() {
 
   // Auto-detect active section using scroll spy
   const activeSection = useScrollSpy(
-    NAVIGATION_SECTIONS.map((section) => section.id)
+    NAVIGATION_SECTIONS.map((section) => section.id),
   );
 
   useEffect(() => {
@@ -58,20 +58,20 @@ export default function HomeView() {
     return (
       <LetterAnimation
         onOpen={handleLetterOpen}
-        coupleName={`${WEDDING_CONFIG.bride.name} & ${WEDDING_CONFIG.groom.name}`}
+        coupleName={`${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}`}
       />
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50">
+    <div className='min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50'>
       <FloatingNavigation
         activeSection={activeSection}
         onScrollToSection={scrollToSection}
       />
 
       {/* Hero Section */}
-      <section id="hero" className="relative">
+      <section id='hero' className='relative'>
         <HeroSection
           isLoaded={isLoaded}
           couple={WEDDING_CONFIG}
@@ -80,7 +80,7 @@ export default function HomeView() {
       </section>
 
       {/* Couple Introduction */}
-      <section id="couple" className="relative">
+      <section id='couple' className='relative'>
         <CoupleIntroduction
           bride={WEDDING_CONFIG.bride}
           groom={WEDDING_CONFIG.groom}
@@ -89,32 +89,29 @@ export default function HomeView() {
       </section>
 
       {/* Wedding Details */}
-      <section id="details" className="relative">
-        <WeddingDetailsCard
-          date={WEDDING_CONFIG.date}
-          venue={WEDDING_CONFIG.venue}
-        />
-        <CountdownTimer targetDate={WEDDING_CONFIG.date} />
+      <section id='details' className='relative'>
+        <WeddingDetailsCard wedding={WEDDING_CONFIG} />
+        <CountdownTimer wedding={WEDDING_CONFIG} />
       </section>
 
       {/* Venue Information */}
-      <section id="venue" className="relative">
-        <VenueInformation venue={WEDDING_CONFIG.venue} />
-        <EventSchedule />
+      <section id='venue' className='relative'>
+        <VenueInformation wedding={WEDDING_CONFIG} />
+        <EventSchedule wedding={WEDDING_CONFIG} />
       </section>
 
       {/* Gallery Preview */}
-      <section id="gallery" className="relative">
+      <section id='gallery' className='relative'>
         <GalleryPreview />
       </section>
 
       {/* RSVP Section */}
-      <section id="rsvp" className="relative">
+      <section id='rsvp' className='relative'>
         <RSVP />
       </section>
 
       {/* Closing Message */}
-      <section id="closing" className="relative">
+      <section id='closing' className='relative'>
         <ClosingMessage
           bride={WEDDING_CONFIG.bride.fullName}
           groom={WEDDING_CONFIG.groom.fullName}

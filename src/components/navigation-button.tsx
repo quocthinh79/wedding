@@ -1,7 +1,6 @@
 import { NAVIGATION_ANIMATIONS } from '@/constants/navigation';
 import type { NavigationSection } from '@/types/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { useTranslation } from 'react-i18next';
 
 // NavigationButton Component for better code organization
 interface NavigationButtonProps {
@@ -17,8 +16,6 @@ export function NavigationButton({
   isActive,
   onClick,
 }: NavigationButtonProps) {
-  const { t } = useTranslation('home');
-
   const baseClasses =
     'relative flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 group overflow-hidden cursor-pointer';
 
@@ -26,6 +23,15 @@ export function NavigationButton({
 
   const inactiveClasses =
     'text-gray-600 hover:text-rose-500 hover:bg-rose-50/80';
+
+  const labels: Record<string, string> = {
+    'navigation.home': 'Trang Chủ',
+    'navigation.couple': 'Cô Dâu Chú Rể',
+    'navigation.details': 'Thiệp Mời',
+    'navigation.venue': 'Địa Điểm',
+    'navigation.gallery': 'Hình Cưới',
+    'navigation.rsvp': 'Xác Nhận',
+  };
 
   return (
     <motion.button
@@ -80,10 +86,7 @@ export function NavigationButton({
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.1 * index }}
       >
-        {
-          // @ts-expect-error - err
-          t(section.labelKey)
-        }
+        {labels[section.labelKey] ?? section.id}
       </motion.span>
 
       {/* Active Indicator Dot with Pulse */}
