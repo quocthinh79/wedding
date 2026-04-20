@@ -155,7 +155,7 @@ export const RSVP = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                    className='w-full px-4 py-3 border border-gray-200 rounded-xl text-black placeholder:text-gray-400 focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                     placeholder='Họ và tên'
                   />
                 </div>
@@ -173,7 +173,7 @@ export const RSVP = () => {
                     value={formData.attendance}
                     onChange={handleChange}
                     required
-                    className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                    className='w-full px-4 py-3 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                   >
                     <option value=''>Vui lòng chọn</option>
                     <option value='yes'>Có, tôi sẽ tham dự</option>
@@ -194,7 +194,7 @@ export const RSVP = () => {
                       name='guests'
                       value={formData.guests}
                       onChange={handleChange}
-                      className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                      className='w-full px-4 py-3 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                     >
                       <option value='1'>1 Khách</option>
                       <option value='2'>2 Khách</option>
@@ -218,7 +218,7 @@ export const RSVP = () => {
                       name='dietaryRestrictions'
                       value={formData.dietaryRestrictions}
                       onChange={handleChange}
-                      className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                      className='w-full px-4 py-3 border border-gray-200 rounded-xl text-black placeholder:text-gray-400 focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                       placeholder='Ví dụ: đi cùng gia đình, đến trễ...'
                     />
                   </div>
@@ -237,7 +237,7 @@ export const RSVP = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300 resize-none'
+                    className='w-full px-4 py-3 border border-gray-200 rounded-xl text-black placeholder:text-gray-400 focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300 resize-none'
                     placeholder='Để lại lời chúc của bạn...'
                   />
                 </div>

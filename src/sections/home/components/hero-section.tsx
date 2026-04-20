@@ -51,7 +51,7 @@ export const HeroSection = ({
             >
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-4 sm:mb-6'>
                 {/* Groom */}
-                <div className='text-center flex-shrink-0 justify-items-center'>
+                <div className='flex flex-col items-center text-center flex-shrink-0'>
                   <div className='w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-blue-200 to-indigo-300 rounded-full flex items-center justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4 shadow-lg'>
                     🤵🏻
                   </div>
@@ -76,7 +76,7 @@ export const HeroSection = ({
                 </div>
 
                 {/* Bride */}
-                <div className='text-center flex-shrink-0 justify-items-center'>
+                <div className='flex flex-col items-center text-center flex-shrink-0'>
                   <div className='w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-rose-200 to-pink-300 rounded-full flex items-center justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4 shadow-lg'>
                     👰🏻
                   </div>
