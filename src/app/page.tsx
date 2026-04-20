@@ -9,14 +9,14 @@ const thumbnailPath = '/thumbnail.jpg';
 
 const getDescription = (audience: 'bride' | 'groom' | null) => {
   if (audience === 'bride') {
-    return 'Trân trọng kính mời bạn đến chung vui trong lễ vu quy của Đồng Giai Nhân và Lê Quốc Thịnh.';
+    return 'Trân trọng kính mời bạn đến chung vui trong lễ vu quy của Đống Giai Nhân và Lê Quốc Thịnh.';
   }
 
   if (audience === 'groom') {
-    return 'Trân trọng kính mời bạn đến chung vui trong lễ tân hôn của Lê Quốc Thịnh và Đồng Giai Nhân.';
+    return 'Trân trọng kính mời bạn đến chung vui trong lễ tân hôn của Lê Quốc Thịnh và Đống Giai Nhân.';
   }
 
-  return 'Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Lê Quốc Thịnh và Đồng Giai Nhân.';
+  return 'Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Lê Quốc Thịnh và Đống Giai Nhân.';
 };
 
 const getAudience = async (searchParams: SearchParams) => {
