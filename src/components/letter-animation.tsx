@@ -81,7 +81,9 @@ export const LetterAnimation = ({
               {toName ? (
                 <>
                   Kính gửi{' '}
-                  <span className='font-medium text-rose-600'>{toName}</span>
+                  <span className='font-medium text-rose-600'>
+                    {decodeURIComponent(toName)}
+                  </span>
                   <br />
                   Trân trọng kính mời đến chung vui cùng chúng tôi
                 </>
@@ -173,7 +175,8 @@ export const LetterAnimation = ({
                         Trân trọng báo tin lễ cưới của chúng tôi
                       </p>
                       <div className='text-xs sm:text-sm text-gray-500 font-serif italic'>
-                        &ldquo;Sự hiện diện của Quý Khách là niềm vinh hạnh cho gia đình chúng tôi&rdquo;
+                        &ldquo;Sự hiện diện của Quý Khách là niềm vinh hạnh cho
+                        gia đình chúng tôi&rdquo;
                       </div>
                     </div>
                   </motion.div>
