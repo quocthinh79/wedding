@@ -164,7 +164,7 @@ export const LetterAnimation = ({
                         <p className='text-sm sm:text-base text-gray-600 mb-2'>
                           Kính mời:{' '}
                           <span className='font-medium text-rose-600'>
-                            {toName}
+                            {decodeURIComponent(toName)}
                           </span>
                         </p>
                       )}
